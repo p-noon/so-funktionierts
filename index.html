@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>So funktioniert’s – Rezept · Zahlung · Lieferung</title>
+
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --card: #181818;
+      --border: #2a2a2a;
+      --text: #eaeaea;
+      --muted: #b5b5b5;
+      --accent: #c9ff3b;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 64px 24px;
+    }
+
+    h1 {
+      font-size: 40px;
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+
+    .intro {
+      color: var(--muted);
+      max-width: 700px;
+      margin-bottom: 56px;
+    }
+
+    /* STEP BAR */
+    .steps {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 64px;
+      flex-wrap: wrap;
+    }
+
+    .step {
+      flex: 1;
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 20px;
+      text-align: center;
+      font-weight: 500;
+    }
+
+    /* TWO COLUMNS */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 48px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 32px;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin-bottom: 24px;
+      color: var(--accent);
+    }
+
+    .item {
+      margin-bottom: 24px;
+    }
+
+    .item:last-child {
+      margin-bottom: 0;
+    }
+
+    .item strong {
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .item span {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* RULE BOX */
+    .rules {
+      background: #121212;
+      border: 1px solid var(--border);
+      padding: 32px;
+    }
+
+    .rules h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 18px;
+      color: var(--accent);
+    }
+
+    .rules ul {
+      padding-left: 18px;
+      margin: 0;
+    }
+
+    .rules li {
+      margin-bottom: 10px;
+      color: var(--muted);
+    }
+
+    /* MOBILE */
+    @media (max-width: 800px) {
+      h1 {
+        font-size: 32px;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <h1>So funktioniert’s</h1>
+    <p class="intro">
+      Der Ablauf ist immer gleich – unabhängig davon, welches Rezept oder
+      welche Lieferart du wählst.
+    </p>
+
+    <!-- CORE STEPS -->
+    <div class="steps">
+      <div class="step">1. Rezept einreichen</div>
+      <div class="step">2. Zahlung</div>
+      <div class="step">3. Erhalt</div>
+    </div>
+
+    <!-- DECISION GRID -->
+    <div class="grid">
+
+      <!-- REZEPT -->
+      <div class="card">
+        <h2>Welche Art Rezept hast du?</h2>
+
+        <div class="item">
+          <strong>Digitales Rezept</strong>
+          <span>Vom Telemediziner direkt per E-Mail übermittelt</span>
+        </div>
+
+        <div class="item">
+          <strong>E-Rezept mit QR-Code</strong>
+          <span>Upload oder Zusendung per E-Mail / WhatsApp</span>
+        </div>
+
+        <div class="item">
+          <strong>Papierrezept</strong>
+          <span>Original gesetzlich erforderlich</span>
+        </div>
+      </div>
+
+      <!-- ERHALT -->
+      <div class="card">
+        <h2>Wie möchtest du es erhalten?</h2>
+
+        <div class="item">
+          <strong>Versand</strong>
+          <span>Deutschlandweit · 24–48 Stunden · Zahlung vorab</span>
+        </div>
+
+        <div class="item">
+          <strong>Abholung / Botendienst</strong>
+          <span>Region Regensburg · Same Day möglich · Zahlung vor Ort</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- RULES -->
+    <div class="rules">
+      <h3>Wichtig zu wissen</h3>
+      <ul>
+        <li>Digitale Rezepte sind für Versand und Abholung geeignet</li>
+        <li>
+          Papierrezept:
+          <ul>
+            <li>Versand → Original per Post einsenden</li>
+            <li>Abholung / Botendienst → Foto vorab, Original bei Übergabe</li>
+          </ul>
+        </li>
+        <li>Zahlung erfolgt grundsätzlich vorab</li>
+        <li>Ausnahme: Abholung oder Botendienst</li>
+      </ul>
+    </div>
+
+  </div>
+</body>
+</html>
